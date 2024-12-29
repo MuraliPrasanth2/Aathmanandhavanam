@@ -11,7 +11,7 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-b from-amber-50 to-orange-50 min-h-screen;
+    @apply bg-gradient-to-b from-amber-50 to-orange-50 min-h-screen font-sans;
     cursor: none;
   }
 
@@ -26,7 +26,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-text-brown mb-6;
+    @apply text-3xl md:text-4xl font-bold text-text-brown mb-6 font-sans;
   }
 
   .tamil-text {

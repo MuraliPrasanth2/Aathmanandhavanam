@@ -15,8 +15,8 @@ const config: Config = {
         'text-brown': 'var(--text-brown)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        tamil: ['var(--font-tamil)'],
+        sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
+        tamil: ['var(--font-tamil)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
-import { Inter, Noto_Sans_Tamil } from 'next/font/google';
+import { Montserrat, Noto_Sans_Tamil } from 'next/font/google';
 import './globals.css';
 import FireCursor from './components/FireCursor';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-montserrat',
+});
+
 const notoSansTamil = Noto_Sans_Tamil({
   subsets: ['tamil'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -19,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={`${inter.variable} ${notoSansTamil.variable} font-sans`}>
+      <body className={`${montserrat.variable} ${notoSansTamil.variable} font-sans`}>
         <FireCursor />
         {children}
       </body>
