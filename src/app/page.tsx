@@ -1,101 +1,171 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import DeitySection from './components/DeitySection';
+import ScheduleSection from './components/ScheduleSection';
+import ContactSection from './components/ContactSection';
+import MobileNav from './components/MobileNav';
+import LoadingAnimation from './components/LoadingAnimation';
+import SlideReveal from './components/SlideReveal';
+import { smoothScroll } from './utils/smoothScroll';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isLoading, setIsLoading] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  if (isLoading) {
+    return <LoadingAnimation />;
+  }
+
+  return (
+    <main className='min-h-screen'>
+      {/* Header/Navigation */}
+      <header
+        className={`fixed w-full z-[40] transition-all duration-300 ${
+          isScrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-white/80'
+        }`}
+      >
+        <nav className='container mx-auto px-4 py-4 flex justify-between items-center'>
+          <div className='flex items-center gap-2'>
+            <span className='text-2xl font-bold text-text-brown'>Sri Yaagavaguru Temple</span>
+          </div>
+          <div className='hidden md:flex items-center gap-6'>
+            <Link href='#about' className='nav-link' onClick={smoothScroll}>
+              About
+            </Link>
+            <Link href='#deities' className='nav-link' onClick={smoothScroll}>
+              Deities
+            </Link>
+            <Link href='#schedule' className='nav-link' onClick={smoothScroll}>
+              Schedule
+            </Link>
+            <Link href='#contact' className='nav-link' onClick={smoothScroll}>
+              Contact
+            </Link>
+          </div>
+          <MobileNav />
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className='relative h-screen flex items-center justify-center overflow-hidden'>
+        <div className='absolute inset-0 z-0'>
+          <Image
+            src='/images/AAthmavathanam.jpeg'
+            alt='Aathmavathanam Background'
+            fill
+            className='object-cover'
+            priority
+            quality={100}
+            sizes='100vw'
+            style={{
+              objectPosition: '50% 30%',
+            }}
+          />
+          <div className='absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/75'></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        <div className='container mx-auto px-4 relative z-10'>
+          <div className='text-center'>
+            <SlideReveal width='100%'>
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-4'>
+                Sri Yaagavaguru Temple
+              </h1>
+            </SlideReveal>
+
+            <SlideReveal width='100%' delay={0.2}>
+              <p className='text-2xl md:text-3xl tamil-text mb-8 text-white/90'>
+                ஸ்ரீ யாகவகுரு கோயில்
+              </p>
+            </SlideReveal>
+
+            <SlideReveal width='100%' delay={0.4}>
+              <p className='text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8'>
+                A sacred place of worship and spiritual enlightenment
+              </p>
+            </SlideReveal>
+
+            <SlideReveal width='100%' delay={0.6}>
+              <div className='flex justify-center gap-4'>
+                <Link
+                  href='#schedule'
+                  className='px-6 py-3 bg-accent-red text-white rounded-lg hover:bg-accent-red/90 transition-colors'
+                  onClick={smoothScroll}
+                >
+                  View Schedule
+                </Link>
+                <Link
+                  href='#contact'
+                  className='px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors'
+                  onClick={smoothScroll}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </SlideReveal>
+          </div>
+        </div>
+
+        {/* Floating Decorative Elements */}
+        <div className='absolute top-1/4 left-10 floating'>
+          <div className='w-16 h-16 text-primary-gold opacity-80'>ॐ</div>
+        </div>
+        <div className='absolute bottom-1/4 right-10 floating' style={{ animationDelay: '-1.5s' }}>
+          <div className='w-16 h-16 text-primary-gold opacity-80'>ॐ</div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id='about' className='py-20'>
+        <div className='container mx-auto px-4'>
+          <h2 className='section-title text-center'>About Our Temple</h2>
+          <div className='max-w-3xl mx-auto text-center'>
+            <p className='text-lg text-text-brown/80 mb-6'>
+              Sri Yaagavaguru Temple is a sacred place where devotees come to seek divine blessings
+              and find spiritual peace. Our temple is dedicated to preserving and promoting the rich
+              cultural and spiritual heritage of Hinduism.
+            </p>
+            <p className='text-lg text-text-brown/80'>
+              We welcome devotees from all walks of life to experience the divine presence and
+              participate in our daily rituals and special ceremonies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Sections */}
+      <DeitySection />
+      <ScheduleSection />
+      <ContactSection />
+
+      {/* Footer */}
+      <footer className='bg-text-brown py-8'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center text-white/80'>
+            <p className='mb-2'>© 2024 Sri Yaagavaguru Temple. All rights reserved.</p>
+            <p>Website developed with devotion and care.</p>
+          </div>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
