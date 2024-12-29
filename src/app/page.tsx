@@ -41,28 +41,44 @@ export default function Home() {
       {/* Header/Navigation */}
       <header
         className={`fixed w-full z-[40] transition-all duration-300 ${
-          isScrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-white/80'
+          isScrolled ? 'bg-black/20 backdrop-blur-sm' : 'bg-transparent'
         }`}
       >
         <nav className='container mx-auto px-4 py-4 flex justify-between items-center'>
-          <div className='flex items-center gap-2'>
-            <span className='text-2xl font-bold text-text-brown'>Sri Yaagavaguru Temple</span>
-          </div>
+          <div className='flex-1'></div>
           <div className='hidden md:flex items-center gap-6'>
-            <Link href='#about' className='nav-link' onClick={smoothScroll}>
+            <Link
+              href='#about'
+              className='text-white hover:text-primary-gold transition-colors duration-300'
+              onClick={smoothScroll}
+            >
               About
             </Link>
-            <Link href='#deities' className='nav-link' onClick={smoothScroll}>
+            <Link
+              href='#deities'
+              className='text-white hover:text-primary-gold transition-colors duration-300'
+              onClick={smoothScroll}
+            >
               Deities
             </Link>
-            <Link href='#schedule' className='nav-link' onClick={smoothScroll}>
+            <Link
+              href='#schedule'
+              className='text-white hover:text-primary-gold transition-colors duration-300'
+              onClick={smoothScroll}
+            >
               Schedule
             </Link>
-            <Link href='#contact' className='nav-link' onClick={smoothScroll}>
+            <Link
+              href='#contact'
+              className='text-white hover:text-primary-gold transition-colors duration-300'
+              onClick={smoothScroll}
+            >
               Contact
             </Link>
           </div>
-          <MobileNav />
+          <div className='flex-1 flex justify-end'>
+            <MobileNav />
+          </div>
         </nav>
       </header>
 

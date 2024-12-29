@@ -37,7 +37,7 @@ export default function MobileNav() {
           viewBox='0 0 24 24'
           strokeWidth={1.5}
           stroke='currentColor'
-          className='w-6 h-6 text-text-brown'
+          className='w-6 h-6 text-white'
         >
           {isOpen ? (
             <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
@@ -53,7 +53,7 @@ export default function MobileNav() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 z-[50] transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-[50] transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsOpen(false)}
@@ -61,35 +61,35 @@ export default function MobileNav() {
 
       {/* Menu Content */}
       <div
-        className={`fixed top-0 right-0 w-full min-h-screen bg-white z-[55] transform transition-transform duration-300 ease-in-out pt-20 ${
+        className={`fixed top-0 right-0 w-full min-h-screen bg-black/90 backdrop-blur-md z-[55] transform transition-transform duration-300 ease-in-out pt-20 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className='h-full flex flex-col items-center justify-center space-y-8 p-4'>
           <Link
             href='#about'
-            className='text-2xl font-bold text-text-brown hover:text-accent-red transition-colors'
+            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
             onClick={handleClick}
           >
             About
           </Link>
           <Link
             href='#deities'
-            className='text-2xl font-bold text-text-brown hover:text-accent-red transition-colors'
+            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
             onClick={handleClick}
           >
             Deities
           </Link>
           <Link
             href='#schedule'
-            className='text-2xl font-bold text-text-brown hover:text-accent-red transition-colors'
+            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
             onClick={handleClick}
           >
             Schedule
           </Link>
           <Link
             href='#contact'
-            className='text-2xl font-bold text-text-brown hover:text-accent-red transition-colors'
+            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
             onClick={handleClick}
           >
             Contact
