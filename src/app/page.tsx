@@ -44,8 +44,7 @@ export default function Home() {
           isScrolled ? 'bg-black/20 backdrop-blur-sm' : 'bg-transparent'
         }`}
       >
-        <nav className='container mx-auto px-4 py-4 flex justify-between items-center'>
-          <div className='flex-1'></div>
+        <nav className='container mx-auto px-4 py-4 flex justify-end items-center'>
           <div className='hidden md:flex items-center gap-6'>
             <Link
               href='#about'
@@ -76,7 +75,7 @@ export default function Home() {
               Contact
             </Link>
           </div>
-          <div className='flex-1 flex justify-end'>
+          <div className='md:ml-6'>
             <MobileNav />
           </div>
         </nav>
