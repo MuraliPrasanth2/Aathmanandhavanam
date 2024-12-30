@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import DeitySection from './components/DeitySection';
-import ScheduleSection from './components/ScheduleSection';
+// import ScheduleSection from './components/ScheduleSection';
 import ContactSection from './components/ContactSection';
 import MobileNav from './components/MobileNav';
 import LoadingAnimation from './components/LoadingAnimation';
@@ -48,28 +48,28 @@ export default function Home() {
           <div className='hidden md:flex items-center gap-6'>
             <Link
               href='#about'
-              className='text-white hover:text-primary-gold transition-colors duration-300'
+              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
               onClick={smoothScroll}
             >
               About
             </Link>
             <Link
               href='#deities'
-              className='text-white hover:text-primary-gold transition-colors duration-300'
+              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
               onClick={smoothScroll}
             >
               Deities
             </Link>
             <Link
               href='#schedule'
-              className='text-white hover:text-primary-gold transition-colors duration-300'
+              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
               onClick={smoothScroll}
             >
               Schedule
             </Link>
             <Link
               href='#contact'
-              className='text-white hover:text-primary-gold transition-colors duration-300'
+              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
               onClick={smoothScroll}
             >
               Contact
