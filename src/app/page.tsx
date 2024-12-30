@@ -122,13 +122,6 @@ export default function Home() {
             <SlideReveal width='100%' delay={0.6}>
               <div className='flex justify-center gap-4'>
                 <Link
-                  href='#schedule'
-                  className='px-6 py-3 bg-accent-red text-white rounded-lg hover:bg-accent-red/90 transition-colors'
-                  onClick={smoothScroll}
-                >
-                  View Schedule
-                </Link>
-                <Link
                   href='#contact'
                   className='px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors'
                   onClick={smoothScroll}
@@ -169,7 +162,7 @@ export default function Home() {
 
       {/* Other Sections */}
       <DeitySection />
-      <ScheduleSection />
+      {/* <ScheduleSection /> */}
       <ContactSection />
 
       {/* Footer */}
