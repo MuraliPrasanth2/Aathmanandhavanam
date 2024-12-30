@@ -160,10 +160,10 @@ export default function Home() {
       <ContactSection />
 
       {/* Footer */}
-      <footer className='bg-text-brown py-8'>
+      <footer className='bg-slate-950 py-6'>
         <div className='container mx-auto px-4'>
-          <div className='text-center text-white/80'>
-            <p className='mb-2'>© 2024 Sri Yaagavaguru Temple. All rights reserved.</p>
+          <div className='text-center text-slate-400'>
+            <p className='mb-1'>© 2024 Sri Yaagavaguru Temple. All rights reserved.</p>
             <p>Website developed with devotion and care.</p>
           </div>
         </div>
