@@ -135,12 +135,12 @@ export default function ContactSection() {
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
           {/* Contact Form */}
-          <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
+          <div className='bg-slate-900 rounded-sm shadow-lg p-8'>
             <h3 className='text-2xl font-bold text-white/50 mb-6'>Send us a Message</h3>
 
             {/* Success Message */}
             {showSuccess && (
-              <div className='mb-6 p-4 bg-green-900/30 border border-green-700 rounded-lg'>
+              <div className='mb-6 p-4 bg-green-900/30 border border-green-700 rounded-sm'>
                 <p className='text-green-400 text-center'>
                   Thank you for your message! We will get back to you soon.
                 </p>
@@ -149,7 +149,7 @@ export default function ContactSection() {
 
             {/* Error Message */}
             {submitError && (
-              <div className='mb-6 p-4 bg-red-900/30 border border-red-700 rounded-lg'>
+              <div className='mb-6 p-4 bg-red-900/30 border border-red-700 rounded-sm'>
                 <p className='text-red-400 text-center'>{submitError}</p>
               </div>
             )}
@@ -170,7 +170,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   disabled={isSubmitting}
-                  className={`w-full px-4 py-2 bg-slate-800 border rounded-lg focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
+                  className={`w-full px-4 py-2 bg-slate-800 border rounded-sm focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
                     touched.name && errors.name ? 'border-red-500' : 'border-slate-700'
                   }`}
                 />
@@ -191,7 +191,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   disabled={isSubmitting}
-                  className={`w-full px-4 py-2 bg-slate-800 border rounded-lg focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
+                  className={`w-full px-4 py-2 bg-slate-800 border rounded-sm focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
                     touched.email && errors.email ? 'border-red-500' : 'border-slate-700'
                   }`}
                 />
@@ -212,7 +212,7 @@ export default function ContactSection() {
                   onBlur={handleBlur}
                   disabled={isSubmitting}
                   rows={4}
-                  className={`w-full px-4 py-2 bg-slate-800 border rounded-lg focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
+                  className={`w-full px-4 py-2 bg-slate-800 border rounded-sm focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
                     touched.message && errors.message ? 'border-red-500' : 'border-slate-700'
                   }`}
                 ></textarea>
@@ -221,7 +221,7 @@ export default function ContactSection() {
               <button
                 type='submit'
                 disabled={isSubmitting}
-                className={`w-full bg-purple-900 text-slate-100 py-3 rounded-lg transition-colors font-semibold ${
+                className={`w-full bg-purple-900 text-slate-100 py-3 rounded-sm transition-colors font-semibold ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-gold/90'
                 }`}
               >
@@ -232,7 +232,7 @@ export default function ContactSection() {
 
           {/* Temple Information */}
           <div className='space-y-8'>
-            <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
+            <div className='bg-slate-900 rounded-sm shadow-lg p-8'>
               <h3 className='text-2xl font-bold text-white/50 mb-6'>Temple Location</h3>
               <div className='space-y-4'>
                 <p className='flex items-start gap-3 text-slate-300'>
@@ -277,7 +277,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
+            <div className='bg-slate-900 rounded-sm shadow-lg p-8'>
               <h3 className='text-2xl font-bold text-white/50 mb-6'>Temple Hours</h3>
               <div className='space-y-4'>
                 <p className='flex items-start gap-3 text-slate-300'>
