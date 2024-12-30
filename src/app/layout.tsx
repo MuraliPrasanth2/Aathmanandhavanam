@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Montserrat, Noto_Sans_Tamil } from 'next/font/google';
 import './globals.css';
-import FireCursor from './components/FireCursor';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -16,7 +15,7 @@ const notoSansTamil = Noto_Sans_Tamil({
 });
 
 export const metadata: Metadata = {
-  title: 'Sri Yaagavaguru Temple',
+  title: 'Sri  Yaagavaguru',
   description:
     'Official website of Sri Yaagavaguru Temple - A sacred place of worship and spiritual enlightenment',
 };
@@ -25,8 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={`${montserrat.variable} ${notoSansTamil.variable} font-sans`}>
-        <FireCursor />
         {children}
+        <div id='portal'></div>
       </body>
     </html>
   );

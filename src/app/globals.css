@@ -2,44 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-gold: #ffd700;
-  --secondary-saffron: #ff9933;
-  --accent-red: #800000;
-  --text-brown: #2c1810;
+html {
+  scroll-behavior: smooth;
 }
 
-@layer base {
-  body {
-    @apply bg-gradient-to-b from-amber-50 to-orange-50 min-h-screen font-sans;
-    cursor: none;
-  }
-
-  * {
-    cursor: none;
-  }
+body {
+  background-color: #ffffff;
 }
 
-@layer components {
-  .nav-link {
-    @apply text-text-brown hover:text-accent-red transition-colors duration-300;
-  }
-
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold text-text-brown mb-6 font-sans;
-  }
-
-  .tamil-text {
-    @apply font-tamil;
-  }
-}
-
-@keyframes float {
+/* Animation keyframes */
+@keyframes floating {
   0% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(0px);
@@ -47,46 +24,73 @@
 }
 
 .floating {
-  animation: float 3s ease-in-out infinite;
+  animation: floating 3s ease-in-out infinite;
 }
 
-@keyframes fireCursor {
+/* Tamil text styles */
+.tamil-text {
+  font-family: var(--font-noto-sans-tamil);
+}
+
+/* Section title styles */
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-12;
+}
+
+/* Shine Button Styles */
+@keyframes shinebright {
   0% {
-    transform: scale(1);
-    opacity: 0.8;
+    transform: translateX(0) rotate(0deg);
   }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
+  25% {
+    transform: translateX(-32px) rotate(90deg);
+  }
+  75% {
+    transform: translateX(32px) rotate(270deg);
   }
   100% {
-    transform: scale(1);
-    opacity: 0.8;
+    transform: translateX(0) rotate(360deg);
   }
 }
 
-/* Custom cursor styles */
-body::before {
+.btn-shine {
+  @apply relative text-blue-800 bg-blue-950 no-underline py-0.5 px-0.5 rounded-full overflow-hidden transition-all duration-150 text-base font-semibold font-montserrat;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+}
+
+.btn-shine > div {
+  @apply relative bg-blue-950 py-3 px-8 rounded-full transition-all duration-200 font-montserrat;
+  box-shadow: inset 0 -8px 4px rgba(29, 155, 240, 0);
+}
+
+.btn-shine:before {
   content: '';
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 87, 34, 0.9) 0%,
-    rgba(255, 152, 0, 0.8) 40%,
-    rgba(255, 193, 7, 0.4) 60%,
-    transparent 80%
-  );
-  position: fixed;
-  left: var(--cursor-x, -100px);
-  top: var(--cursor-y, -100px);
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: screen;
-  animation: fireCursor 1.5s infinite;
-  transform-origin: center;
-  border-radius: 50%;
-  filter: blur(2px);
-  will-change: transform;
+  @apply absolute w-8 h-8 rounded-full;
+  top: calc(50% - 16px);
+  left: calc(50% - 16px);
+  box-shadow: 0 24px 32px 2px rgb(29, 155, 240);
+  animation: shinebright 8s linear infinite;
+  transition: all 0.4s ease;
+}
+
+.btn-shine:hover {
+  @apply text-[#1d9bf0];
+}
+
+.btn-shine:hover > div {
+  box-shadow: inset 0 -8px 12px rgba(29, 155, 240, 0.1);
+}
+
+.btn-shine:hover:before {
+  animation-play-state: paused;
+  box-shadow: 0 24px 32px 12px rgb(29, 155, 240);
+}
+
+.btn-shine:active {
+  transform: scale(0.98) translateY(1px);
+}
+
+.btn-shine:active:before {
+  box-shadow: 0 24px 32px 42px rgb(29, 155, 240);
 }

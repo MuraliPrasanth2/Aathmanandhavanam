@@ -85,48 +85,42 @@ export default function Home() {
       <section className='relative h-screen flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 z-0'>
           <Image
-            src='/images/AAthmavathanam.jpeg'
-            alt='Aathmavathanam Background'
+            src='/images/Meditation.jpg'
+            alt='Meditation Background'
             fill
             className='object-cover'
             priority
             quality={100}
             sizes='100vw'
             style={{
-              objectPosition: '50% 30%',
+              objectPosition: '50% 50%',
             }}
           />
-          <div className='absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90'></div>
+          <div className='absolute inset-0 bg-gradient-to-b from-black/60 via-black/55 to-black/60'></div>
         </div>
 
         <div className='container mx-auto px-4 relative z-10'>
           <div className='text-center'>
             <SlideReveal width='100%'>
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-4'>
-                Sri Yaagavaguru Temple
+              <h1 className='text-[2.8rem] md:text-7xl font-semibold text-white/50 mb-8 font-montserrat'>
+                Sri Yaagava Guru
               </h1>
             </SlideReveal>
 
             <SlideReveal width='100%' delay={0.2}>
-              <p className='text-2xl md:text-3xl tamil-text mb-8 text-white/90'>
-                ஸ்ரீ யாகவகுரு கோயில்
-              </p>
+              <p className='text-2xl md:text-3xl tamil-text mb-24 text-white/60'>ஸ்ரீ யாகவகுரு</p>
             </SlideReveal>
 
             <SlideReveal width='100%' delay={0.4}>
-              <p className='text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8'>
+              <p className='text-sm md:text-xl text-white/70 max-w-2xl mx-auto mb-8'>
                 A sacred place of worship and spiritual enlightenment
               </p>
             </SlideReveal>
 
             <SlideReveal width='100%' delay={0.6}>
               <div className='flex justify-center gap-4'>
-                <Link
-                  href='#contact'
-                  className='px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors'
-                  onClick={smoothScroll}
-                >
-                  Contact Us
+                <Link href='#contact' className='btn-shine opacity-80' onClick={smoothScroll}>
+                  <div className='text-slate-100'>Contact Us</div>
                 </Link>
               </div>
             </SlideReveal>
@@ -134,12 +128,12 @@ export default function Home() {
         </div>
 
         {/* Floating Decorative Elements */}
-        <div className='absolute top-1/4 left-10 floating'>
+        {/* <div className='absolute top-1/4 left-10 floating'>
           <div className='w-16 h-16 text-primary-gold opacity-80'>ॐ</div>
         </div>
         <div className='absolute bottom-1/4 right-10 floating' style={{ animationDelay: '-1.5s' }}>
           <div className='w-16 h-16 text-primary-gold opacity-80'>ॐ</div>
-        </div>
+        </div> */}
       </section>
 
       {/* About Section */}
