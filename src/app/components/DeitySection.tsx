@@ -38,7 +38,7 @@ export default function DeitySection() {
   return (
     <section id='deities' className='py-20 bg-slate-950'>
       <div className='container mx-auto px-4'>
-        <h2 className='section-title text-center text-white'>Our Deities</h2>
+        <h2 className='section-title text-center text-white/50'>Our Deities</h2>
         <p className='text-center text-slate-300 mb-12 max-w-2xl mx-auto'>
           Experience the divine presence of our temple&apos;s sacred deities, each embodying unique
           aspects of spiritual enlightenment.
@@ -60,9 +60,9 @@ export default function DeitySection() {
                 />
               </div>
               <div className='p-6'>
-                <h3 className='text-xl font-bold text-white mb-2'>{deity.name}</h3>
-                <p className='text-lg tamil-text text-slate-200 mb-3'>{deity.tamilName}</p>
-                <p className='text-slate-300'>{deity.description}</p>
+                <h3 className='text-xl font-bold text-white/50 mb-2'>{deity.name}</h3>
+                <p className='text-lg tamil-text text-md text-white/50 mb-3'>{deity.tamilName}</p>
+                <p className='text-slate-300 text-sm'>{deity.description}</p>
               </div>
             </div>
           ))}

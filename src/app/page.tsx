@@ -139,14 +139,14 @@ export default function Home() {
       {/* About Section */}
       <section id='about' className='py-20 bg-slate-950'>
         <div className='container mx-auto px-4'>
-          <h2 className='section-title text-center text-white'>About Our Temple</h2>
+          <h2 className='section-title text-center text-white/50'>About Our Temple</h2>
           <div className='max-w-3xl mx-auto text-center'>
-            <p className='text-lg text-slate-300 mb-6'>
+            <p className='text-md font-montserrat text-slate-300 mb-6'>
               Sri Yaagavaguru Temple is a sacred place where devotees come to seek divine blessings
               and find spiritual peace. Our temple is dedicated to preserving and promoting the rich
               cultural and spiritual heritage of Hinduism.
             </p>
-            <p className='text-lg text-slate-300'>
+            <p className='text-md text-slate-300'>
               We welcome devotees from all walks of life to experience the divine presence and
               participate in our daily rituals and special ceremonies.
             </p>

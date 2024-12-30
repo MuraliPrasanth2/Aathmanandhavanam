@@ -127,7 +127,7 @@ export default function ContactSection() {
   return (
     <section id='contact' className='py-20 bg-slate-950'>
       <div className='container mx-auto px-4'>
-        <h2 className='section-title text-center text-white'>Contact Us</h2>
+        <h2 className='section-title text-center text-white/50'>Contact Us</h2>
         <p className='text-center text-slate-300 mb-12 max-w-2xl mx-auto'>
           Get in touch with us for any inquiries about temple services, special pujas, or general
           information.
@@ -136,7 +136,7 @@ export default function ContactSection() {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
           {/* Contact Form */}
           <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
-            <h3 className='text-2xl font-bold text-white mb-6'>Send us a Message</h3>
+            <h3 className='text-2xl font-bold text-white/50 mb-6'>Send us a Message</h3>
 
             {/* Success Message */}
             {showSuccess && (
@@ -221,11 +221,11 @@ export default function ContactSection() {
               <button
                 type='submit'
                 disabled={isSubmitting}
-                className={`w-full bg-primary-gold text-slate-900 py-3 rounded-lg transition-colors font-semibold ${
+                className={`w-full bg-purple-900 text-slate-100 py-3 rounded-lg transition-colors font-semibold ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-gold/90'
                 }`}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                <span className='opacity-100'>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
             </form>
           </div>
@@ -233,7 +233,7 @@ export default function ContactSection() {
           {/* Temple Information */}
           <div className='space-y-8'>
             <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
-              <h3 className='text-2xl font-bold text-white mb-6'>Temple Location</h3>
+              <h3 className='text-2xl font-bold text-white/50 mb-6'>Temple Location</h3>
               <div className='space-y-4'>
                 <p className='flex items-start gap-3 text-slate-300'>
                   <svg
@@ -278,7 +278,7 @@ export default function ContactSection() {
             </div>
 
             <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
-              <h3 className='text-2xl font-bold text-white mb-6'>Temple Hours</h3>
+              <h3 className='text-2xl font-bold text-white/50 mb-6'>Temple Hours</h3>
               <div className='space-y-4'>
                 <p className='flex items-start gap-3 text-slate-300'>
                   <svg
