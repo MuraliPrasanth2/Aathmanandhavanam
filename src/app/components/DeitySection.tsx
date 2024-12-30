@@ -36,10 +36,10 @@ const deities = [
 
 export default function DeitySection() {
   return (
-    <section id='deities' className='py-20 bg-gradient-to-b from-orange-50 to-amber-50'>
+    <section id='deities' className='py-20 bg-slate-950'>
       <div className='container mx-auto px-4'>
-        <h2 className='section-title text-center'>Our Deities</h2>
-        <p className='text-center text-text-brown/80 mb-12 max-w-2xl mx-auto'>
+        <h2 className='section-title text-center text-white'>Our Deities</h2>
+        <p className='text-center text-slate-300 mb-12 max-w-2xl mx-auto'>
           Experience the divine presence of our temple&apos;s sacred deities, each embodying unique
           aspects of spiritual enlightenment.
         </p>
@@ -48,7 +48,7 @@ export default function DeitySection() {
           {deities.map((deity) => (
             <div
               key={deity.id}
-              className='bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300'
+              className='bg-slate-900 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300'
             >
               <div className='relative h-64'>
                 <Image
@@ -60,9 +60,9 @@ export default function DeitySection() {
                 />
               </div>
               <div className='p-6'>
-                <h3 className='text-xl font-bold text-text-brown mb-2'>{deity.name}</h3>
-                <p className='text-lg tamil-text text-text-brown/90 mb-3'>{deity.tamilName}</p>
-                <p className='text-text-brown/80'>{deity.description}</p>
+                <h3 className='text-xl font-bold text-white mb-2'>{deity.name}</h3>
+                <p className='text-lg tamil-text text-slate-200 mb-3'>{deity.tamilName}</p>
+                <p className='text-slate-300'>{deity.description}</p>
               </div>
             </div>
           ))}

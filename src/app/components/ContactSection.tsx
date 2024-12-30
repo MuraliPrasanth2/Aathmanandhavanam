@@ -125,23 +125,23 @@ export default function ContactSection() {
   };
 
   return (
-    <section id='contact' className='py-20 bg-gradient-to-b from-amber-50 to-orange-50'>
+    <section id='contact' className='py-20 bg-slate-950'>
       <div className='container mx-auto px-4'>
-        <h2 className='section-title text-center'>Contact Us</h2>
-        <p className='text-center text-text-brown/80 mb-12 max-w-2xl mx-auto'>
+        <h2 className='section-title text-center text-white'>Contact Us</h2>
+        <p className='text-center text-slate-300 mb-12 max-w-2xl mx-auto'>
           Get in touch with us for any inquiries about temple services, special pujas, or general
           information.
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
           {/* Contact Form */}
-          <div className='bg-white rounded-lg shadow-lg p-8'>
-            <h3 className='text-2xl font-bold text-text-brown mb-6'>Send us a Message</h3>
+          <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
+            <h3 className='text-2xl font-bold text-white mb-6'>Send us a Message</h3>
 
             {/* Success Message */}
             {showSuccess && (
-              <div className='mb-6 p-4 bg-green-50 border border-green-200 rounded-lg'>
-                <p className='text-green-800 text-center'>
+              <div className='mb-6 p-4 bg-green-900/30 border border-green-700 rounded-lg'>
+                <p className='text-green-400 text-center'>
                   Thank you for your message! We will get back to you soon.
                 </p>
               </div>
@@ -149,18 +149,18 @@ export default function ContactSection() {
 
             {/* Error Message */}
             {submitError && (
-              <div className='mb-6 p-4 bg-red-50 border border-red-200 rounded-lg'>
-                <p className='text-red-800 text-center'>{submitError}</p>
+              <div className='mb-6 p-4 bg-red-900/30 border border-red-700 rounded-lg'>
+                <p className='text-red-400 text-center'>{submitError}</p>
               </div>
             )}
 
             <form className='space-y-6' onSubmit={handleSubmit} noValidate>
               <div>
-                <label htmlFor='name' className='block text-text-brown mb-2'>
+                <label htmlFor='name' className='block text-slate-300 mb-2'>
                   Name
                 </label>
                 {touched.name && errors.name && (
-                  <p className='text-red-500 text-sm mb-1'>{errors.name}</p>
+                  <p className='text-red-400 text-sm mb-1'>{errors.name}</p>
                 )}
                 <input
                   type='text'
@@ -170,18 +170,18 @@ export default function ContactSection() {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   disabled={isSubmitting}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent-red focus:border-transparent ${
-                    touched.name && errors.name ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-2 bg-slate-800 border rounded-lg focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
+                    touched.name && errors.name ? 'border-red-500' : 'border-slate-700'
                   }`}
                 />
               </div>
 
               <div>
-                <label htmlFor='email' className='block text-text-brown mb-2'>
+                <label htmlFor='email' className='block text-slate-300 mb-2'>
                   Email
                 </label>
                 {touched.email && errors.email && (
-                  <p className='text-red-500 text-sm mb-1'>{errors.email}</p>
+                  <p className='text-red-400 text-sm mb-1'>{errors.email}</p>
                 )}
                 <input
                   type='email'
@@ -191,18 +191,18 @@ export default function ContactSection() {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   disabled={isSubmitting}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent-red focus:border-transparent ${
-                    touched.email && errors.email ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-2 bg-slate-800 border rounded-lg focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
+                    touched.email && errors.email ? 'border-red-500' : 'border-slate-700'
                   }`}
                 />
               </div>
 
               <div>
-                <label htmlFor='message' className='block text-text-brown mb-2'>
+                <label htmlFor='message' className='block text-slate-300 mb-2'>
                   Message
                 </label>
                 {touched.message && errors.message && (
-                  <p className='text-red-500 text-sm mb-1'>{errors.message}</p>
+                  <p className='text-red-400 text-sm mb-1'>{errors.message}</p>
                 )}
                 <textarea
                   id='message'
@@ -212,8 +212,8 @@ export default function ContactSection() {
                   onBlur={handleBlur}
                   disabled={isSubmitting}
                   rows={4}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent-red focus:border-transparent ${
-                    touched.message && errors.message ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-2 bg-slate-800 border rounded-lg focus:ring-2 focus:ring-primary-gold focus:border-transparent text-white placeholder-slate-400 ${
+                    touched.message && errors.message ? 'border-red-500' : 'border-slate-700'
                   }`}
                 ></textarea>
               </div>
@@ -221,8 +221,8 @@ export default function ContactSection() {
               <button
                 type='submit'
                 disabled={isSubmitting}
-                className={`w-full bg-accent-red text-white py-3 rounded-lg transition-colors ${
-                  isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-accent-red/90'
+                className={`w-full bg-primary-gold text-slate-900 py-3 rounded-lg transition-colors font-semibold ${
+                  isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-gold/90'
                 }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -232,10 +232,10 @@ export default function ContactSection() {
 
           {/* Temple Information */}
           <div className='space-y-8'>
-            <div className='bg-white rounded-lg shadow-lg p-8'>
-              <h3 className='text-2xl font-bold text-text-brown mb-6'>Temple Location</h3>
+            <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
+              <h3 className='text-2xl font-bold text-white mb-6'>Temple Location</h3>
               <div className='space-y-4'>
-                <p className='flex items-start gap-3 text-text-brown/80'>
+                <p className='flex items-start gap-3 text-slate-300'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
@@ -257,7 +257,7 @@ export default function ContactSection() {
                   </svg>
                   123 Temple Street, City Name, State - PIN Code
                 </p>
-                <p className='flex items-start gap-3 text-text-brown/80'>
+                <p className='flex items-start gap-3 text-slate-300'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
@@ -277,10 +277,10 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className='bg-white rounded-lg shadow-lg p-8'>
-              <h3 className='text-2xl font-bold text-text-brown mb-6'>Temple Hours</h3>
+            <div className='bg-slate-900 rounded-lg shadow-lg p-8'>
+              <h3 className='text-2xl font-bold text-white mb-6'>Temple Hours</h3>
               <div className='space-y-4'>
-                <p className='flex items-start gap-3 text-text-brown/80'>
+                <p className='flex items-start gap-3 text-slate-300'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
@@ -297,7 +297,7 @@ export default function ContactSection() {
                   </svg>
                   Monday - Sunday: 5:30 AM - 8:30 PM
                 </p>
-                <p className='text-text-brown/80 pl-9'>
+                <p className='text-slate-300 pl-9'>
                   * Special timings during festivals and special occasions
                 </p>
               </div>
