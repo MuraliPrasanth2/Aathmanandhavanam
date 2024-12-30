@@ -60,13 +60,13 @@ export default function Home() {
             >
               Deities
             </Link>
-            <Link
+            {/* <Link
               href='#schedule'
               className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
               onClick={smoothScroll}
             >
               Schedule
-            </Link>
+            </Link> */}
             <Link
               href='#contact'
               className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'

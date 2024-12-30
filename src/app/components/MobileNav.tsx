@@ -80,13 +80,13 @@ export default function MobileNav() {
           >
             Deities
           </Link>
-          <Link
+          {/* <Link
             href='#schedule'
             className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
             onClick={handleClick}
           >
             Schedule
-          </Link>
+          </Link> */}
           <Link
             href='#contact'
             className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'

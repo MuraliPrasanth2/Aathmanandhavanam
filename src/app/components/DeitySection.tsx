@@ -48,7 +48,7 @@ export default function DeitySection() {
           {deities.map((deity) => (
             <div
               key={deity.id}
-              className='bg-slate-900 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300'
+              className='bg-slate-900 rounded-sm shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300'
             >
               <div className='relative h-64'>
                 <Image
