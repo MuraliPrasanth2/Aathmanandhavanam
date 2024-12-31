@@ -59,11 +59,7 @@ export default function Navigation() {
             <Link href='/initiatives' className={getLinkClass('/initiatives')}>
               Initiatives
             </Link>
-            <Link
-              href='#get-involved'
-              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
-              onClick={smoothScroll}
-            >
+            <Link href='/get-involved' className={getLinkClass('/get-involved')}>
               Get Involved
             </Link>
             <Link href='/contact' className={getLinkClass('/contact')}>

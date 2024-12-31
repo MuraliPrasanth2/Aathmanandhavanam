@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SlideReveal from '../components/SlideReveal';
 import ContactSection from '../components/ContactSection';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function ContactPage() {
   return (
@@ -131,6 +132,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

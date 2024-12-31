@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import SlideReveal from '../components/SlideReveal';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function AboutPage() {
   return (
@@ -121,6 +122,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

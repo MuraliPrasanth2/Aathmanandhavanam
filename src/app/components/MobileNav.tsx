@@ -91,8 +91,8 @@ export default function MobileNav() {
             Initiatives
           </Link>
           <Link
-            href='#get-involved'
-            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
+            href='/get-involved'
+            className={getLinkClass('/get-involved')}
             onClick={handleSectionClick}
           >
             Get Involved

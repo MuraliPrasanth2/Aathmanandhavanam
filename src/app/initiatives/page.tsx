@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SlideReveal from '../components/SlideReveal';
 import Navigation from '../components/Navigation';
 import Link from 'next/link';
+import Footer from '../components/Footer';
 
 export default function InitiativesPage() {
   return (
@@ -170,6 +171,8 @@ export default function InitiativesPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
