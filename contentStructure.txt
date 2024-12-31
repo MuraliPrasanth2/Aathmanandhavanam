@@ -1,0 +1,41 @@
+Homepage:
+1. Hero Section:
+- Welcome message
+- Tagline
+- Introduction about foundation
+
+2. About Our Founder Section:
+[Links to About page]
+- Madhuyagav's image
+- Brief introduction
+
+3. Our Mission Section:
+[Links to About page]
+- Mission statement about Siddha Vedic lifestyle
+
+4. Key Initiatives Section:
+[Links to Initiatives page]
+- Promoting Siddha Vedic Education
+- Community Charity Services
+- Kosala and Animal Welfare
+- Tribal Outreach and Empowerment
+- Education: Nursery and Primary School
+
+5. Get Involved:
+(This can be a section on the homepage instead of a separate page)
+- Donate: Support our charity initiatives
+- Volunteer: Join our outreach programs
+- Learn: Attend workshops and classes
+- Spread the Word: Help spread awareness
+
+6. Contact Information:
+(Can be in footer or a simple contact page)
+- Address
+- Phone
+- Email
+
+Main Navigation Menu should simply be:
+- Home
+- About
+- Our Initiatives
+- Contact

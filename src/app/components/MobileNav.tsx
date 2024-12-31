@@ -19,8 +19,10 @@ export default function MobileNav() {
     };
   }, [isOpen]);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    smoothScroll(e);
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (e.currentTarget.href.includes('#')) {
+      smoothScroll(e);
+    }
     setIsOpen(false);
   };
 
@@ -67,30 +69,30 @@ export default function MobileNav() {
       >
         <div className='h-full flex flex-col items-center justify-center space-y-8 p-4'>
           <Link
-            href='#about'
+            href='/about'
             className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
-            onClick={handleClick}
+            onClick={handleSectionClick}
           >
             About
           </Link>
           <Link
-            href='#deities'
+            href='/initiatives'
             className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
-            onClick={handleClick}
+            onClick={handleSectionClick}
           >
-            Deities
+            Initiatives
           </Link>
-          {/* <Link
-            href='#schedule'
-            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
-            onClick={handleClick}
-          >
-            Schedule
-          </Link> */}
           <Link
-            href='#contact'
+            href='#get-involved'
             className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
-            onClick={handleClick}
+            onClick={handleSectionClick}
+          >
+            Get Involved
+          </Link>
+          <Link
+            href='/contact'
+            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
+            onClick={handleSectionClick}
           >
             Contact
           </Link>
