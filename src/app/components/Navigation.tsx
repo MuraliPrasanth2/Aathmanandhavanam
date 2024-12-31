@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import MobileNav from './MobileNav';
-import { smoothScroll } from '../utils/smoothScroll';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
