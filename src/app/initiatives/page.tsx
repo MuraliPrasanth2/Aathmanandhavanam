@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import SlideReveal from '../components/SlideReveal';
 import Navigation from '../components/Navigation';
+import Link from 'next/link';
 
 export default function InitiativesPage() {
   return (
@@ -49,7 +50,7 @@ export default function InitiativesPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>
             <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12 text-center'>
-              Siddha Vedic Education
+              Promoting Siddha Vedic Education
             </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
               <p className='text-lg text-slate-300 mb-6'>
@@ -60,9 +61,7 @@ export default function InitiativesPage() {
               </p>
               <p className='text-lg text-slate-300'>
                 We believe that by adopting a Siddha Vedic lifestyle, individuals can elevate their
-                consciousness and experience a deeper connection with the universe. Our programs
-                include meditation workshops, spiritual discourses, and practical sessions on
-                incorporating ancient wisdom into modern life.
+                consciousness and experience a deeper connection with the universe.
               </p>
             </div>
           </div>
@@ -77,17 +76,13 @@ export default function InitiativesPage() {
               Community Charity Services
             </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
-              <p className='text-lg text-slate-300 mb-6'>
-                In times of crisis, the foundation stands strong in its commitment to service.
-                During the COVID-19 lockdown, we provided more than 10,000 grocery packages and
-                fresh vegetables to families in need across several tribal settlements, including
-                Vellimudi, Nedungundram, Nagaruthu, and Kattupatti.
-              </p>
               <p className='text-lg text-slate-300'>
-                Our commitment to the welfare of marginalized and underserved communities continues
-                to be one of the cornerstone activities of the foundation. We regularly organize
-                food distribution drives, medical camps, and other support services for those in
-                need.
+                In times of crisis, the foundation stands strong in its commitment to service.
+                During the COVID-19 lockdown, the foundation provided more than 10,000 grocery
+                packages and fresh vegetables to families in need across several tribal settlements,
+                including Vellimudi, Nedungundram, Nagaruthu, and Kattupatti. Our commitment to the
+                welfare of the marginalized and underserved communities continues to be one of the
+                cornerstone activities of the foundation.
               </p>
             </div>
           </div>
@@ -102,16 +97,14 @@ export default function InitiativesPage() {
               Kosala and Animal Welfare
             </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
-              <p className='text-lg text-slate-300 mb-6'>
+              <p className='text-lg text-slate-300'>
                 The foundation proudly maintains a Kosala (a sacred cow shelter), dedicated to the
                 care and well-being of desi cows. We believe in the spiritual importance of
                 protecting these sacred animals and ensuring their safe and healthy living.
               </p>
               <p className='text-lg text-slate-300'>
                 The cow is considered a symbol of purity, prosperity, and divine energy in the
-                Siddha and Vedic traditions, and our Kosala serves as a sanctuary for them. We
-                provide proper care, nutrition, and medical attention to all the animals in our
-                shelter.
+                Siddha and Vedic traditions, and our Kosala serves as a sanctuary for them.
               </p>
             </div>
           </div>
@@ -126,7 +119,7 @@ export default function InitiativesPage() {
               Tribal Outreach and Empowerment
             </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
-              <p className='text-lg text-slate-300 mb-6'>
+              <p className='text-lg text-slate-300'>
                 We understand the importance of supporting the growth and development of tribal
                 children. To this end, the foundation runs personality development and social
                 awareness programs for children in tribal areas, helping them realize their
@@ -134,8 +127,7 @@ export default function InitiativesPage() {
               </p>
               <p className='text-lg text-slate-300'>
                 These initiatives aim to build strong, empowered individuals capable of contributing
-                to society while staying connected to their cultural roots. Our programs focus on
-                education, skill development, and cultural preservation.
+                to society while staying connected to their cultural roots.
               </p>
             </div>
           </div>
@@ -150,18 +142,31 @@ export default function InitiativesPage() {
               Education: Nursery and Primary School
             </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
-              <p className='text-lg text-slate-300 mb-6'>
+              <p className='text-lg text-slate-300'>
                 Our nursery and primary school provides quality education at a minimal cost of ₹5000
                 per year. We believe that education is the key to transforming lives, and through
-                this school, we offer children a blend of modern knowledge and traditional values.
-              </p>
-              <p className='text-lg text-slate-300'>
-                Our curriculum ensures that children grow up with a deep understanding of their
-                heritage while gaining a strong foundation for future success. We focus on holistic
-                development, combining academic excellence with character building and cultural
-                awareness.
+                this school, we offer children a blend of modern knowledge and traditional values,
+                ensuring they grow up with a deep understanding of their heritage and a strong
+                foundation for future success.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Us Button */}
+      <section className='py-12 bg-slate-900'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center'>
+            <p className='text-lg text-slate-300 mb-8'>
+              Want to learn more about our initiatives or get involved?
+            </p>
+            <Link
+              href='/contact'
+              className='inline-block px-8 py-3 bg-purple-900 text-slate-100 rounded-sm hover:bg-primary-gold/90 transition-colors font-semibold'
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>

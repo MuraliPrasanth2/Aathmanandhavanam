@@ -4,10 +4,12 @@ export default function ContactSection() {
   return (
     <section id='contact' className='py-20 bg-slate-950'>
       <div className='container mx-auto px-4'>
-        <h2 className='section-title text-center text-white/50'>Contact Us</h2>
-        <p className='text-center text-slate-300 mb-12 max-w-2xl mx-auto'>
-          Get in touch with us for any inquiries about our programs, initiatives, or how you can get
-          involved with the foundation.
+        <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12 text-center'>
+          Contact Us
+        </h2>
+        <p className='text-lg text-slate-300 text-center mb-12'>
+          To learn more about our programs, or to contribute in any way, please get in touch with us
+          through our contact details below:
         </p>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto'>
@@ -94,15 +96,9 @@ export default function ContactSection() {
           </div>
 
           <div className='bg-slate-900 rounded-sm shadow-lg p-8'>
-            <h3 className='text-2xl font-bold text-white/50 mb-6'>Get Involved</h3>
-            <p className='text-slate-300 mb-4'>
-              Join us in our mission to spread the wisdom of Siddha Vedic lifestyle and serve
-              humanity. Whether you want to volunteer, donate, or participate in our programs, we
-              welcome your support.
-            </p>
             <p className='text-slate-300'>
-              Contact us to learn more about our upcoming events, workshops, and opportunities to
-              contribute to our initiatives.
+              We welcome you to reach out for any inquiries or to get involved with our programs and
+              initiatives. We look forward to connecting with you.
             </p>
           </div>
         </div>

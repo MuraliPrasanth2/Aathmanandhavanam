@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { smoothScroll } from '../utils/smoothScroll';
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -24,6 +26,13 @@ export default function MobileNav() {
       smoothScroll(e);
     }
     setIsOpen(false);
+  };
+
+  const getLinkClass = (path: string) => {
+    const isActive = pathname === path;
+    return `text-2xl font-bold transition-colors ${
+      isActive ? 'text-primary-gold' : 'text-white/80 hover:text-primary-gold'
+    }`;
   };
 
   return (
@@ -68,16 +77,15 @@ export default function MobileNav() {
         }`}
       >
         <div className='h-full flex flex-col items-center justify-center space-y-8 p-4'>
-          <Link
-            href='/about'
-            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
-            onClick={handleSectionClick}
-          >
-            About
+          <Link href='/' className={getLinkClass('/')} onClick={handleSectionClick}>
+            Home
+          </Link>
+          <Link href='/about' className={getLinkClass('/about')} onClick={handleSectionClick}>
+            About Founder
           </Link>
           <Link
             href='/initiatives'
-            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
+            className={getLinkClass('/initiatives')}
             onClick={handleSectionClick}
           >
             Initiatives
@@ -89,11 +97,7 @@ export default function MobileNav() {
           >
             Get Involved
           </Link>
-          <Link
-            href='/contact'
-            className='text-2xl font-bold text-white hover:text-primary-gold transition-colors'
-            onClick={handleSectionClick}
-          >
+          <Link href='/contact' className={getLinkClass('/contact')} onClick={handleSectionClick}>
             Contact
           </Link>
         </div>

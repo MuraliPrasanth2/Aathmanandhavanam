@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className='relative py-32 flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 z-0'>
           <Image
-            src='/images/founder.jpg'
+            src='/images/founder.jpeg'
             alt='Founder Background'
             fill
             className='object-cover'
@@ -31,21 +31,24 @@ export default function AboutPage() {
           <div className='text-center'>
             <SlideReveal width='100%'>
               <h1 className='text-4xl md:text-6xl font-semibold text-white/50 mb-8 font-montserrat'>
-                About Our Founder
+                Our Founder - Madhuyagav
               </h1>
             </SlideReveal>
           </div>
         </div>
       </section>
 
-      {/* Founder Section */}
+      {/* Early Life Section */}
       <section className='py-20 bg-slate-950'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>
+            <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12 text-center'>
+              Early Life & Spiritual Journey
+            </h2>
             <div className='grid md:grid-cols-2 gap-8 items-center mb-12'>
               <div className='relative h-[400px] rounded-lg overflow-hidden'>
                 <Image
-                  src='/images/founder.jpg'
+                  src='/images/founder.jpeg'
                   alt='Madhuyagav - Founder of Yagava Guru Foundation'
                   fill
                   className='object-cover'
@@ -66,6 +69,17 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Spiritual Philosophy Section */}
+      <section className='py-20 bg-slate-900'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto'>
+            <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12 text-center'>
+              Spiritual Philosophy
+            </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
               <p className='text-lg text-slate-300 mb-6'>
                 He believes that true spirituality is not just about personal enlightenment, but
@@ -83,56 +97,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className='py-20 bg-slate-900'>
-        <div className='container mx-auto px-4'>
-          <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12 text-center'>
-            Our Mission
-          </h2>
-          <div className='max-w-4xl mx-auto'>
-            <div className='prose prose-lg prose-invert mx-auto'>
-              <p className='text-lg text-slate-300 mb-6'>
-                At the Yagava Guru Foundation, we believe that true well-being is achieved when
-                body, mind, and soul are in harmony. We are dedicated to teaching the profound
-                wisdom of the Siddha tradition to the masses, enabling them to align with their true
-                essence and embrace a healthier, more fulfilling lifestyle.
-              </p>
-              <p className='text-lg text-slate-300 mb-6'>
-                Our programs and initiatives are designed to help individuals connect with their
-                divine nature while fostering community development and social service. Through our
-                various educational programs, charity services, and outreach initiatives, we strive
-                to create positive change in society.
-              </p>
-              <p className='text-lg text-slate-300'>
-                We understand the importance of preserving and promoting the ancient wisdom of the
-                Siddha tradition while making it accessible and relevant to contemporary life. Our
-                approach combines traditional teachings with modern understanding, creating a bridge
-                between ancient wisdom and present-day needs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Legacy Section */}
+      {/* Vision & Legacy Section */}
       <section className='py-20 bg-slate-950'>
         <div className='container mx-auto px-4'>
-          <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12 text-center'>
-            Our Legacy
-          </h2>
           <div className='max-w-4xl mx-auto'>
+            <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12 text-center'>
+              Vision & Legacy
+            </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
               <p className='text-lg text-slate-300 mb-6'>
-                Madhuyagav's legacy is one of service, compassion, and spiritual transformation.
-                Through the Yagava Guru Foundation, he continues to inspire individuals worldwide to
-                live harmoniously, spiritually, and with a sense of responsibility toward the world
-                around them.
+                Madhuyagav&apos;s vision extends beyond spiritual teachings to encompass the
+                holistic development of individuals and communities. His approach combines ancient
+                wisdom with modern understanding, making spiritual knowledge accessible and
+                practical for contemporary life.
               </p>
               <p className='text-lg text-slate-300'>
-                The foundation's work extends beyond spiritual teachings to include practical
-                initiatives that address the needs of communities, particularly focusing on
-                education, healthcare, and social welfare. We believe that spiritual growth goes
-                hand in hand with service to humanity, and this belief guides all our activities.
+                Through the Yagava Guru Foundation, he continues to inspire individuals worldwide to
+                live harmoniously, spiritually, and with a sense of responsibility toward the world
+                around them. His legacy is one of service, compassion, and spiritual transformation,
+                touching countless lives through various initiatives and programs.
               </p>
             </div>
           </div>

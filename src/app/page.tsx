@@ -1,32 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ContactSection from './components/ContactSection';
-import LoadingAnimation from './components/LoadingAnimation';
 import Navigation from './components/Navigation';
 import SlideReveal from './components/SlideReveal';
 import { smoothScroll } from './utils/smoothScroll';
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
-  if (isLoading) {
-    return <LoadingAnimation />;
-  }
-
   return (
     <main className='min-h-screen'>
       <Navigation />
@@ -115,10 +96,14 @@ export default function Home() {
                   Chosen by Guru Yaagavar at the age of 14, Madhuyagav has dedicated himself to
                   carrying forward the timeless teachings of the Siddha tradition.
                 </p>
-                <p className='text-md text-slate-300'>
-                  His legacy is one of service, compassion, and spiritual transformation, inspiring
-                  individuals worldwide to live harmoniously and spiritually.
-                </p>
+                <div className='flex justify-start mt-8'>
+                  <Link
+                    href='/about'
+                    className='inline-block px-6 py-2 bg-purple-900 text-slate-100 rounded-sm hover:bg-primary-gold/90 transition-colors font-semibold'
+                  >
+                    Read More About Our Founder
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -194,32 +179,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Get Involved Section */}
-      <section id='get-involved' className='py-20 bg-slate-900'>
+      {/* Join Us Section */}
+      <section className='py-20 bg-slate-950' id='get-involved'>
         <div className='container mx-auto px-4'>
-          <h2 className='section-title text-center text-white/50 mb-12'>Get Involved</h2>
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto'>
-            <div className='text-center'>
-              <h3 className='text-xl text-primary-gold mb-4'>Donate</h3>
-              <p className='text-slate-300'>
-                Support our charity initiatives and make a difference.
+          <div className='max-w-4xl mx-auto text-center'>
+            <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12'>
+              Join Us in Serving Humanity
+            </h2>
+            <div className='prose prose-lg prose-invert mx-auto'>
+              <p className='text-lg text-slate-300 mb-12'>
+                The Yagava Guru Foundation welcomes all those who are interested in exploring the
+                profound teachings of the Siddhas while making a tangible impact in the world.
+                Whether through our educational programs, charity initiatives, or spiritual
+                retreats, we offer various avenues for individuals to grow and contribute.
               </p>
-            </div>
-            <div className='text-center'>
-              <h3 className='text-xl text-primary-gold mb-4'>Volunteer</h3>
-              <p className='text-slate-300'>
-                Join our outreach programs and help communities in need.
+              <p className='text-lg text-slate-300 mb-12'>
+                By following the principles of selfless service, spiritual growth, and holistic
+                well-being, we believe that together we can create a world where compassion, wisdom,
+                and peace reign supreme.
               </p>
-            </div>
-            <div className='text-center'>
-              <h3 className='text-xl text-primary-gold mb-4'>Learn</h3>
-              <p className='text-slate-300'>
-                Attend workshops and classes on Siddha Vedic lifestyle.
-              </p>
-            </div>
-            <div className='text-center'>
-              <h3 className='text-xl text-primary-gold mb-4'>Spread the Word</h3>
-              <p className='text-slate-300'>Help us spread awareness of our mission and work.</p>
+              <h3 className='text-2xl text-white/50 mb-8'>Get Involved</h3>
+              <div className='grid md:grid-cols-2 gap-8'>
+                <div className='bg-slate-900/50 p-6 rounded-lg'>
+                  <h3 className='text-xl text-primary-gold mb-4'>Donate</h3>
+                  <p className='text-slate-300'>
+                    Support our charity initiatives, including the distribution of food packages and
+                    care for animals.
+                  </p>
+                </div>
+                <div className='bg-slate-900/50 p-6 rounded-lg'>
+                  <h3 className='text-xl text-primary-gold mb-4'>Volunteer</h3>
+                  <p className='text-slate-300'>
+                    Join us in our outreach programs, helping communities in need.
+                  </p>
+                </div>
+                <div className='bg-slate-900/50 p-6 rounded-lg'>
+                  <h3 className='text-xl text-primary-gold mb-4'>Learn</h3>
+                  <p className='text-slate-300'>
+                    Attend our workshops and classes on the Siddha Vedic lifestyle, or enroll in our
+                    educational programs.
+                  </p>
+                </div>
+                <div className='bg-slate-900/50 p-6 rounded-lg'>
+                  <h3 className='text-xl text-primary-gold mb-4'>Spread the Word</h3>
+                  <p className='text-slate-300'>
+                    Help us spread awareness of the foundation&apos;s work and mission.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

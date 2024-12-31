@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import MobileNav from './MobileNav';
 import { smoothScroll } from '../utils/smoothScroll';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,13 @@ export default function Navigation() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const getLinkClass = (path: string) => {
+    const isActive = pathname === path;
+    return `text-slate-300/80 hover:text-primary-gold transition-colors duration-300 ${
+      isActive ? 'text-primary-gold font-semibold' : ''
+    }`;
+  };
 
   return (
     <header
@@ -40,17 +49,14 @@ export default function Navigation() {
 
         {/* Navigation Links */}
         <div className='flex items-center'>
-          <div className='hidden md:flex items-center gap-6'>
-            <Link
-              href='/about'
-              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
-            >
-              About
+          <div className='hidden md:flex items-center space-x-8'>
+            <Link href='/' className={getLinkClass('/')}>
+              Home
             </Link>
-            <Link
-              href='/initiatives'
-              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
-            >
+            <Link href='/about' className={getLinkClass('/about')}>
+              About Founder
+            </Link>
+            <Link href='/initiatives' className={getLinkClass('/initiatives')}>
               Initiatives
             </Link>
             <Link
@@ -60,10 +66,7 @@ export default function Navigation() {
             >
               Get Involved
             </Link>
-            <Link
-              href='/contact'
-              className='text-slate-300/80 hover:text-primary-gold transition-colors duration-300'
-            >
+            <Link href='/contact' className={getLinkClass('/contact')}>
               Contact
             </Link>
           </div>
