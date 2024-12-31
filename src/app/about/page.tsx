@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SlideReveal from '../components/SlideReveal';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
@@ -122,6 +123,24 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Contact Us Button */}
+      <section className='py-12 bg-slate-900'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center'>
+            <p className='text-lg text-slate-300 mb-8'>
+              Want to learn more about our founder or get involved with our mission?
+            </p>
+            <Link
+              href='/contact'
+              className='inline-block px-8 py-3 bg-purple-900 text-slate-100 rounded-sm hover:bg-primary-gold/90 transition-colors font-semibold'
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );
