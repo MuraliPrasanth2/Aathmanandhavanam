@@ -26,14 +26,13 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [
-      {
-        url: '/images/logo.png',
-        type: 'image/png',
-      },
-    ],
+    icon: '/images/logo.png',
     shortcut: '/images/logo.png',
     apple: '/images/logo.png',
+    other: {
+      rel: 'icon',
+      url: '/images/logo.png',
+    },
   },
 };
 
