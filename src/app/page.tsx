@@ -34,21 +34,22 @@ export default function Home() {
           <div className='text-center'>
             <SlideReveal width='100%'>
               <h1 className='text-[2.8rem] md:text-7xl font-semibold text-white/50 mb-8 font-montserrat'>
-                Yagava Guru Foundation
+                Welcome to Aathmanathavanam
               </h1>
             </SlideReveal>
 
             <SlideReveal width='100%' delay={0.2}>
               <p className='text-2xl md:text-3xl mb-6 text-white/60'>
-                Empowering Lives, Preserving Traditions, Serving Humanity
+                A Sacred Path to Spiritual Enlightenment
               </p>
             </SlideReveal>
 
             <SlideReveal width='100%' delay={0.4}>
               <p className='text-sm md:text-xl text-white/70 max-w-2xl mx-auto mb-8'>
-                The Yagava Guru Foundation was established by Madhuyagav, a revered spiritual leader
-                and disciple of the timeless Siddha master, Guru Yaagavar. Our foundation is
-                committed to spreading the wisdom of the ancient Siddha Vedic lifestyle.
+                Nestled in the serene foothills of Thadakai Malai in the Western Ghats,
+                Aathmanathavanam is a spiritual sanctuary where ancient wisdom meets modern seekers.
+                Experience the profound teachings of the Siddha tradition in a space of divine
+                tranquility.
               </p>
             </SlideReveal>
 
@@ -74,34 +75,37 @@ export default function Home() {
       {/* About Section */}
       <section id='about' className='py-20 bg-slate-950'>
         <div className='container mx-auto px-4'>
-          <h2 className='section-title text-center text-white/50 mb-12'>About Our Founder</h2>
+          <h2 className='section-title text-center text-white/50 mb-12'>Our Divine Legacy</h2>
           <div className='max-w-4xl mx-auto'>
             <div className='grid md:grid-cols-2 gap-8 items-center'>
               <div className='relative h-[400px] rounded-lg overflow-hidden'>
                 <Image
                   src='/images/founder.jpeg'
-                  alt='Madhuyagav'
+                  alt='Madhuyaagavar'
                   fill
                   className='object-cover'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
               </div>
               <div>
+                <h3 className='text-xl text-primary-gold mb-4'>Guru Nataraja Yagava</h3>
                 <p className='text-md font-montserrat text-slate-300 mb-6'>
-                  The Yagava Guru Foundation is the realization of the vision and spiritual guidance
-                  of Madhuyagav, a man whose life has been a profound journey of spiritual awakening
-                  and selfless service.
+                  A revered Siddhar and timeless spiritual master, Guru Nataraja Yagava is a direct
+                  disciple of Thirumoolar. Transcending the physical realm in his astral body, he
+                  has guided seekers for over 3,000 years.
                 </p>
+                <h3 className='text-xl text-primary-gold mb-4'>Madhuyaagavar</h3>
                 <p className='text-md text-slate-300 mb-6'>
-                  Chosen by Guru Yaagavar at the age of 14, Madhuyagav has dedicated himself to
-                  carrying forward the timeless teachings of the Siddha tradition.
+                  Chosen at the age of 14 by Guru Nataraja Yagava, Madhuyaagavar carries forward the
+                  sacred teachings of the Siddha tradition, helping individuals explore the profound
+                  connections between body, mind, and soul.
                 </p>
                 <div className='flex justify-start mt-8'>
                   <Link
                     href='/about'
                     className='inline-block px-6 py-2 bg-purple-900 text-slate-100 rounded-sm hover:bg-primary-gold/90 transition-colors font-semibold'
                   >
-                    Read More About Our Founder
+                    Learn More About Our Legacy
                   </Link>
                 </div>
               </div>
@@ -113,67 +117,56 @@ export default function Home() {
       {/* Mission Section */}
       <section className='py-20 bg-slate-900'>
         <div className='container mx-auto px-4'>
-          <h2 className='section-title text-center text-white/50 mb-12'>Our Mission</h2>
+          <h2 className='section-title text-center text-white/50 mb-12'>Our Sacred Purpose</h2>
           <div className='max-w-3xl mx-auto text-center'>
             <p className='text-md font-montserrat text-slate-300 mb-6'>
-              At the Yagava Guru Foundation, we believe that true well-being is achieved when body,
-              mind, and soul are in harmony. We are dedicated to teaching the profound wisdom of the
-              Siddha tradition to the masses, enabling them to align with their true essence and
-              embrace a healthier, more fulfilling lifestyle.
+              Aathmanathavanam is more than just a place of learning; it is a spiritual retreat for
+              individuals on a quest for holistic well-being. The Siddha philosophy integrates
+              spiritual teachings with practices that promote physical, mental, and emotional
+              health.
             </p>
             <p className='text-md text-slate-300'>
-              Our programs and initiatives are designed to help individuals connect with their
-              divine nature while fostering community development and social service.
+              Under Madhuyaagavar's leadership, Aathmanathavanam serves as a transformative path for
+              those who wish to unlock the full potential of their consciousness and align with
+              their true essence.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Key Initiatives Section */}
+      {/* Sacred Spaces Section */}
       <section id='initiatives' className='py-20 bg-slate-950'>
         <div className='container mx-auto px-4'>
-          <h2 className='section-title text-center text-white/50 mb-12'>Key Initiatives</h2>
+          <h2 className='section-title text-center text-white/50 mb-12'>Sacred Spaces</h2>
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'>
             <div className='bg-slate-900/50 p-6 rounded-lg'>
-              <h3 className='text-xl text-primary-gold mb-4'>Siddha Vedic Education</h3>
+              <h3 className='text-xl text-primary-gold mb-4'>Prayer Complex</h3>
               <p className='text-slate-300'>
-                Promoting spiritual growth, physical well-being, and mental peace through various
-                educational programs and teachings.
+                A sacred space consecrated to Samukthiyambikai, housing divine deities including
+                Kaalasamhaara Bairavar and Sarabeeswarar.
               </p>
             </div>
             <div className='bg-slate-900/50 p-6 rounded-lg'>
-              <h3 className='text-xl text-primary-gold mb-4'>Community Charity Services</h3>
+              <h3 className='text-xl text-primary-gold mb-4'>Aadhisankarar Temple</h3>
               <p className='text-slate-300'>
-                Providing support to families in need through grocery packages and essential
-                supplies across tribal settlements.
+                Located in Kottur Malayandipattanam, this temple serves as the spiritual foundation
+                of Aathmanathavanam, radiating divine energy and blessings.
               </p>
             </div>
             <div className='bg-slate-900/50 p-6 rounded-lg'>
-              <h3 className='text-xl text-primary-gold mb-4'>Kosala and Animal Welfare</h3>
+              <h3 className='text-xl text-primary-gold mb-4'>Sacred Statues</h3>
               <p className='text-slate-300'>
-                Maintaining a sacred cow shelter dedicated to the care and well-being of desi cows.
-              </p>
-            </div>
-            <div className='bg-slate-900/50 p-6 rounded-lg'>
-              <h3 className='text-xl text-primary-gold mb-4'>Tribal Outreach</h3>
-              <p className='text-slate-300'>
-                Running personality development and social awareness programs for children in tribal
-                areas.
-              </p>
-            </div>
-            <div className='bg-slate-900/50 p-6 rounded-lg'>
-              <h3 className='text-xl text-primary-gold mb-4'>Education</h3>
-              <p className='text-slate-300'>
-                Operating a nursery and primary school providing quality education at minimal cost.
+                Divine embodiments of Aadhi Amaranayaki and Aadhisankarar, offering blessings and
+                spiritual guidance to devotees.
               </p>
             </div>
           </div>
           <div className='text-center mt-12'>
             <Link
-              href='/initiatives'
+              href='/sacred-spaces'
               className='inline-block px-8 py-3 bg-purple-900 text-slate-100 rounded-sm hover:bg-primary-gold/90 transition-colors font-semibold'
             >
-              Learn More About Our Initiatives
+              Explore Our Sacred Spaces
             </Link>
           </div>
         </div>
@@ -184,46 +177,46 @@ export default function Home() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-3xl md:text-4xl font-semibold text-white/50 mb-12'>
-              Join Us in Serving Humanity
+              Join Us on the Path to Enlightenment
             </h2>
             <div className='prose prose-lg prose-invert mx-auto'>
               <p className='text-lg text-slate-300 mb-12'>
-                The Yagava Guru Foundation welcomes all those who are interested in exploring the
-                profound teachings of the Siddhas while making a tangible impact in the world.
-                Whether through our educational programs, charity initiatives, or spiritual
-                retreats, we offer various avenues for individuals to grow and contribute.
+                Aathmanathavanam welcomes all seekers who wish to explore the profound teachings of
+                the Siddha tradition. Whether you seek spiritual guidance, inner peace, or a deeper
+                connection with the divine, our sacred spaces offer a sanctuary for your journey.
               </p>
               <p className='text-lg text-slate-300 mb-12'>
-                By following the principles of selfless service, spiritual growth, and holistic
-                well-being, we believe that together we can create a world where compassion, wisdom,
-                and peace reign supreme.
+                Through meditation, prayer, and the blessings of our divine deities, we invite you
+                to experience the transformative power of ancient wisdom in a space where spiritual
+                enlightenment flourishes.
               </p>
-              <h3 className='text-2xl text-white/50 mb-8'>Get Involved</h3>
+              <h3 className='text-2xl text-white/50 mb-8'>Ways to Connect</h3>
               <div className='grid md:grid-cols-2 gap-8'>
                 <div className='bg-slate-900/50 p-6 rounded-lg'>
-                  <h3 className='text-xl text-primary-gold mb-4'>Donate</h3>
+                  <h3 className='text-xl text-primary-gold mb-4'>Visit the Temple</h3>
                   <p className='text-slate-300'>
-                    Support our charity initiatives, including the distribution of food packages and
-                    care for animals.
+                    Experience the divine presence at the Aadhisankarar Temple and receive blessings
+                    from our sacred deities.
                   </p>
                 </div>
                 <div className='bg-slate-900/50 p-6 rounded-lg'>
-                  <h3 className='text-xl text-primary-gold mb-4'>Volunteer</h3>
+                  <h3 className='text-xl text-primary-gold mb-4'>Spiritual Guidance</h3>
                   <p className='text-slate-300'>
-                    Join us in our outreach programs, helping communities in need.
+                    Seek guidance and wisdom through our spiritual programs and teachings.
                   </p>
                 </div>
                 <div className='bg-slate-900/50 p-6 rounded-lg'>
-                  <h3 className='text-xl text-primary-gold mb-4'>Learn</h3>
+                  <h3 className='text-xl text-primary-gold mb-4'>Sacred Rituals</h3>
                   <p className='text-slate-300'>
-                    Attend our workshops and classes on the Siddha Vedic lifestyle, or enroll in our
-                    educational programs.
+                    Participate in divine ceremonies and experience the transformative power of
+                    ancient rituals.
                   </p>
                 </div>
                 <div className='bg-slate-900/50 p-6 rounded-lg'>
-                  <h3 className='text-xl text-primary-gold mb-4'>Spread the Word</h3>
+                  <h3 className='text-xl text-primary-gold mb-4'>Community</h3>
                   <p className='text-slate-300'>
-                    Help us spread awareness of the foundation&apos;s work and mission.
+                    Join our spiritual community and connect with fellow seekers on the path to
+                    enlightenment.
                   </p>
                 </div>
               </div>
@@ -239,7 +232,7 @@ export default function Home() {
       <footer className='bg-slate-950 py-6'>
         <div className='container mx-auto px-4'>
           <div className='text-center text-slate-400'>
-            <p>© 2024 Yagava Guru Foundation. All rights reserved.</p>
+            <p>© 2024 Aathmanathavanam. All rights reserved.</p>
           </div>
         </div>
       </footer>
