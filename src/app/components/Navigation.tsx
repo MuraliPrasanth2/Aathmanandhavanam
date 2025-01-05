@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import MobileNav from './MobileNav';
 
 export default function Navigation() {
@@ -12,62 +12,59 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const getLinkClass = (path: string) => {
     const isActive = pathname === path;
-    return `text-slate-300/80 hover:text-primary-gold transition-colors duration-300 ${
-      isActive ? 'text-primary-gold font-semibold' : ''
+    return `text-lg transition-colors ${
+      isActive ? 'text-primary-gold' : 'text-white/80 hover:text-primary-gold'
     }`;
   };
 
   return (
     <header
-      className={`fixed w-full z-[40] transition-all duration-300 ${
-        isScrolled ? 'bg-black/20 backdrop-blur-sm' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        isScrolled ? 'bg-slate-950/95 backdrop-blur-sm' : 'bg-transparent'
       }`}
     >
-      <nav className='container mx-auto px-4 py-4 flex justify-between items-center'>
-        {/* Logo */}
-        <Link href='/' className='flex items-center'>
-          <Image
-            src='/images/logo.png'
-            alt='Yagava Guru Foundation Logo'
-            width={40}
-            height={40}
-            className='object-contain'
-          />
-        </Link>
+      <nav className='container mx-auto px-4 py-4'>
+        <div className='flex items-center justify-between'>
+          <Link href='/' className='flex items-center'>
+            <Image
+              src='/images/logo.png'
+              alt='Aathmanathavanam Logo'
+              width={40}
+              height={40}
+              className='rounded-full'
+            />
+          </Link>
 
-        {/* Navigation Links */}
-        <div className='flex items-center'>
-          <div className='hidden md:flex items-center space-x-8'>
+          {/* Desktop Navigation */}
+          <div className='hidden lg:flex items-center space-x-8'>
             <Link href='/' className={getLinkClass('/')}>
               Home
             </Link>
             <Link href='/about' className={getLinkClass('/about')}>
-              About Founder
+              Divine Legacy
             </Link>
-            <Link href='/initiatives' className={getLinkClass('/initiatives')}>
-              Initiatives
+            <Link href='/sacred-spaces' className={getLinkClass('/sacred-spaces')}>
+              Sacred Sanctuary
             </Link>
-            <Link href='/get-involved' className={getLinkClass('/get-involved')}>
-              Get Involved
+            <Link href='/temple' className={getLinkClass('/temple')}>
+              Aadhisankarar Temple
             </Link>
             <Link href='/contact' className={getLinkClass('/contact')}>
-              Contact
+              Visit & Contact
             </Link>
           </div>
-          <div className='md:ml-6'>
-            <MobileNav />
-          </div>
+
+          {/* Mobile Navigation */}
+          <MobileNav />
         </div>
       </nav>
     </header>
