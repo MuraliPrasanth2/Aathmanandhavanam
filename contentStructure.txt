@@ -1,41 +1,115 @@
-Homepage:
-1. Hero Section:
-- Welcome message
-- Tagline
-- Introduction about foundation
+Here's the complete website structure with image placements and linking details:
+HEADER (All Pages):
 
-2. About Our Founder Section:
-[Links to About page]
-- Madhuyagav's image
-- Brief introduction
+Logo (Image 3 - Golden symbol) at top left
+Navigation Menu: Home | About | Sacred Spaces | Temple
 
-3. Our Mission Section:
-[Links to About page]
-- Mission statement about Siddha Vedic lifestyle
+HOME PAGE:
 
-4. Key Initiatives Section:
-[Links to Initiatives page]
-- Promoting Siddha Vedic Education
-- Community Charity Services
-- Kosala and Animal Welfare
-- Tribal Outreach and Empowerment
-- Education: Nursery and Primary School
+Hero Section:
 
-5. Get Involved:
-(This can be a section on the homepage instead of a separate page)
-- Donate: Support our charity initiatives
-- Volunteer: Join our outreach programs
-- Learn: Attend workshops and classes
-- Spread the Word: Help spread awareness
+Image 2 (Temple exterior with waterfall) as background
+"Welcome to Aathmanathavanam" overlay text
+Link to "About" page
 
-6. Contact Information:
-(Can be in footer or a simple contact page)
-- Address
-- Phone
-- Email
 
-Main Navigation Menu should simply be:
-- Home
-- About
-- Our Initiatives
-- Contact
+Guru Nataraja Yagava Section:
+
+Content about Guru Nataraja Yagava
+Link to "About Founder" section
+Link to "Temple" page
+
+
+
+ABOUT PAGE:
+
+Founder Section:
+
+Content about Madhuyaagavar
+Link to "Sacred Spaces"
+
+
+Aathmanathavanam Path Section (Collapsible):
+
+Spiritual enlightenment content
+Link to "Join Us" section
+
+
+Sacred Sanctuary Section:
+
+Image 2 (Temple exterior)
+Western Ghats description
+Link to "Prayer Complex"
+
+
+Prayer Complex Section:
+
+Image 4 (Deity with multiple arms) for Kaalasamhaara Bairavar
+Link to "Temple" page
+
+
+
+SACRED SPACES PAGE:
+
+Samukthiyambikai Section:
+
+Image 5 (Deity in green attire)
+Link to "Divine Blessings" section
+
+
+Prayer Complex Details:
+
+Information about deities
+Link to "Temple" page
+
+
+Join Us Section:
+
+Call to action content
+Contact information
+
+
+
+TEMPLE PAGE:
+
+Aadhisankarar Temple Introduction:
+
+Image 1 (Decorated shrine with Shiva lingam)
+Location details
+Link to "Sacred Statues"
+
+
+Sacred Statues Section:
+
+Image 5 (Deity in green attire) for Aadhi Amaranayaki
+Image 4 (Deity with multiple arms) for divine connection
+Links to individual deity sections
+
+
+Miracles and Blessings Section:
+
+Divine Jothi description
+Link to "Legacy" section
+
+
+Legacy Section:
+
+Guru Yaagavar's vision
+Link to "About" page
+
+
+
+FOOTER (All Pages):
+
+Quick links to all main sections
+Logo (Image 3 - Golden symbol)
+Contact information
+
+INTERNAL LINKING STRUCTURE:
+
+Home → About → Sacred Spaces → Temple (Main navigation flow)
+Each deity section links to related content
+"Join Us" section accessible from all pages
+Cross-linking between related sections (e.g., Prayer Complex → Temple)
+
+This structure provides a clear hierarchy and ensures visitors can easily navigate between related content while maintaining a logical flow of information.
