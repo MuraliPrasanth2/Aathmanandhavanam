@@ -28,17 +28,18 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files
+.env
+.env*.local
 
 # vercel
 .vercel
 
+# IDE
+.vscode
+.idea
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Local Netlify folder
-.netlify

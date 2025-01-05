@@ -25,7 +25,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className='fixed w-full z-50 border-b border-slate-800/50'>
+    <nav className='fixed w-full z-50'>
       <div className='container mx-auto px-4'>
         <div className='flex items-center justify-between h-20'>
           {/* Logo */}
